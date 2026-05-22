@@ -1,8 +1,9 @@
-<figure id="fondAccueil">
+<figure id="fondAccueil" class="fixed bottom-0 left-0 p-0 w-full h-full">
   <video
     poster="video/seq02.webp"
     id="video1"
     #video1
+    class="object-fill w-full h-full"
     aria-label="Vidéo illustrative d'un ciel qui passe du jour à la nuit en boucle."
     autoplay muted loop>
     <track kind="captions">
@@ -11,12 +12,13 @@
     </video>
 </figure>
 
-<main id="haut">
-  <figure id="portrait">
+<main id="haut" class="relative m-auto mt-[12vh] mb-0 w-full max-w-70 justify-self-center grid grid-cols-[1fr_155px] gap-x-7.5 items-center">
+  <figure id="portrait" class="w-full">
       <video
         poster="video/seq03.webp"
         id="video2"
         #video2
+        class="w-full rounded-full border-[3px] border-dotted animate-[cercleP_15s_infinite]"
         aria-label="Vidéo photo portrait de Sylvain GIRAULT avec éléments lumineux superposés au visage."
         autoplay muted loop>
         <track kind="captions">
@@ -24,10 +26,12 @@
         Your browser does not support the video tag.
       </video>
   </figure>
-  <h1>Sylvain GIRAULT</h1>
+  <h1 class="text-accueil1 w-37.5 font-heading-home-s text-3xl font-normal animate-[flashH1_10s_infinite]">Sylvain GIRAULT</h1>
 </main>
 
-<h2>Développeur Front-End <span>Web & Mobile</span></h2>
+<h2 class="relative m-auto mt-[22vh] mb-0 border-l border-(--btnBorder) h-20 w-full max-w-67.5 pl-5.5 flex flex-col items-start justify-center text-white font-heading-home-s text-[1.17rem] font-semibold leading-[1.8]">Développeur Front-End
+  <span class="text-white font-heading-home-s text-[65%] pb-1.75 font-semibold leading-normal tracking-[.45rem] uppercase">Web & Mobile</span>
+</h2>
 <nav>
-  <a routerLink="/skills" class="btnLink" >Découvrir le profil</a>
+  <a routerLink="/skills" class="btnLink mt-7.5 text-center" >Découvrir le profil</a>
 </nav>

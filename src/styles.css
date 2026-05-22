@@ -4,8 +4,8 @@
   /* COLORS */
   --color-bg: #ffffff;
   --color-text: #000022;
-  --txtAccueil1: #f8d8ff;
-  --txtAccueil2: #ffe3d6;
+  --color-accueil1: #f8d8ff;
+  --color-accueil2: #ffe3d6;
   --cerclePortrait1: rgba(145, 129, 255, 0.2);
   --cerclePortrait2: rgba(255, 227, 149, 0.226);
   --cerclePortrait3: rgba(243, 149, 255, 0.384);
@@ -23,8 +23,8 @@
   --bleu: #019da8;
 
   /* FONTS */
-  --font-heading-home-1: 'CoR', serif;
-  --font-heading-home-2: 'CoS', serif;
+  --font-heading-home-r: 'CoR', serif;
+  --font-heading-home-s: 'CoS', serif;
   --font-inside: 'Baskervville', serif;
 
   --text-xxs: .6875rem;
@@ -36,6 +36,13 @@
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
+
+  /* BREAKPOINTS */
+  --breakpoint-xs: 412px;
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1366px;
 }
 
 .dark{
@@ -77,6 +84,16 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+  }
+  body.page-home {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    height: 100vh;
+  }
+  body.page-inside {
+    background-color: var(--color-bg);
+    color: var(--color-text);
   }
   h1, h2, h3 {
     font-family: sans-serif;

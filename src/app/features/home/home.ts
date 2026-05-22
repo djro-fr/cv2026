@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -8,9 +8,11 @@ import { RouterLink } from "@angular/router";
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements AfterViewInit {
+export class Home implements AfterViewInit, OnDestroy {
 
   private readonly platformId = inject(PLATFORM_ID);
+
+  private resizeTimeout: ReturnType<typeof setTimeout> | null = null;
 
   @ViewChild('video1') video1!: ElementRef<HTMLVideoElement>;
   @ViewChild('video2') video2!: ElementRef<HTMLVideoElement>;
@@ -46,11 +48,23 @@ export class Home implements AfterViewInit {
     const v1 = this.video1?.nativeElement;
     const v2 = this.video2?.nativeElement;
     if (!v1 || !v2) return;
-    v1.querySelector('source')!.src = this.sources.video1[quality];
-    v2.querySelector('source')!.src = this.sources.video2[quality];
-    console.info(v1.querySelector('source')!.src);
-    console.info(v2.querySelector('source')!.src);
+    v1.src = this.sources.video1[quality];
+    v2.src = this.sources.video2[quality];
     v1.load();
     v2.load();
   }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+    this.resizeTimeout = setTimeout(() => {
+      this.changeSource(this.getQuality());
+    }, 250);
+  }
+
+  ngOnDestroy(): void {
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+  }
+
 }
