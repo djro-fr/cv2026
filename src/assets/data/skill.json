@@ -1,0 +1,434 @@
+[
+  {
+    "id": 1,
+    "name": "Visual Studio Code",
+    "category": "IDE",
+    "logo": "visualStudioCode",
+    "version": "1.101.2",
+    "level":2
+  },
+  {
+    "id": 2,
+    "name": "Visual Studio 2022",
+    "category": "IDE",
+    "logo": "visualStudio2022",
+    "version": "17.13.6",
+    "level":1
+  },
+  {
+    "id": 3,
+    "name": "MySQL",
+    "category": "SGBD",
+    "logo": "mySQL",
+    "version": "8.0",
+    "level":3
+  },
+  {
+    "id": 4,
+    "name": "MongoDB",
+    "category": "SGBD",
+    "logo": "mongoDB",
+    "version": "8.0.8",
+    "level":1
+  },
+  {
+    "id": 5,
+    "name": "Git",
+    "category": "logiciel",
+    "logo": "git",
+    "version": "2.49",
+    "level":2
+  },
+  {
+    "id": 6,
+    "name": "Ubuntu",
+    "category": "OS",
+    "logo": "ubuntu",
+    "version": "24.04.2",
+    "level":2
+  },
+  {
+    "id": 7,
+    "name": "Docker",
+    "category": "Serveurs & conteneurisation",
+    "logo": "docker",
+    "version": "28.2.2",
+    "level":2
+  },
+  {
+    "id": 8,
+    "name": "Android Studio",
+    "category": "logiciel",
+    "logo": "androidStudio",
+    "version": "2025.1.1",
+    "level":1
+  },
+  {
+    "id": 9,
+    "name": "HTML5",
+    "category": "langage",
+    "logo": "HTML5",
+    "version": "5.2",
+    "level":3
+  },
+  {
+    "id": 10,
+    "name": "PHP",
+    "category": "langage",
+    "logo": "PHP",
+    "version": "8.3.1",
+    "level":2
+  },
+  {
+    "id": 11,
+    "name": "PHPUnit",
+    "category": "frameworks & outils de tests",
+    "logo": "PHPUnit",
+    "version": "12.1",
+    "level":1
+  },
+  {
+    "id": 12,
+    "name": "Studio3T",
+    "category": "Client API/BD",
+    "logo": "studio3T",
+    "version": "2025.1.0",
+    "level":1
+  },
+  {
+    "id": 13,
+    "name": "Node.JS",
+    "category": "Environnement d'exécution",
+    "logo": "nodeJS",
+    "version": "v22.17.0",
+    "level":1
+  },
+  {
+    "id": 14,
+    "name": "NPM",
+    "category": "Gestionnaire de paquets",
+    "logo": "npm",
+    "version": "10.9.2",
+    "level":1
+  },
+  {
+    "id": 15,
+    "name": "JavaScript",
+    "category": "langage",
+    "logo": "JS",
+    "version": "ECMAScript 2022",
+    "level":3
+  },
+  {
+    "id": 16,
+    "name": "CSS3",
+    "category": "langage",
+    "logo": "CSS",
+    "version": "CSS3",
+    "level":3
+  },
+  {
+    "id": 17,
+    "name": "Sass",
+    "category": "langage",
+    "logo": "sass",
+    "version": "3.6.5",
+    "level":3
+  },
+  {
+    "id": 18,
+    "name": "Gulp.JS",
+    "category": "Toolkit JS",
+    "logo": "gulp",
+    "version": "5.0.0",
+    "level":1
+  },
+  {
+    "id": 19,
+    "name": "WAMP Server",
+    "category": "Environnement web",
+    "logo": "wamp",
+    "version": "3.3.7",
+    "level":2
+  },
+  {
+    "id": 20,
+    "name": "Jira",
+    "category": "Gestion de projet",
+    "logo": "jira",
+    "version": "",
+    "level":1
+  },
+  {
+    "id": 21,
+    "name": "Trello",
+    "category": "Gestion de projet",
+    "logo": "trello",
+    "version": "",
+    "level":3
+  },
+  {
+    "id": 22,
+    "name": "Notion",
+    "category": "Gestion de projet",
+    "logo": "notion",
+    "version": "",
+    "level":1
+  },
+  {
+    "id": 23,
+    "name": "WordPress",
+    "category": "CMS",
+    "logo": "wordpress",
+    "version": "6.8.1",
+    "level":2
+  },
+  {
+    "id": 24,
+    "name": "Figma",
+    "category": "Graphisme Prototypage",
+    "logo": "figma",
+    "version": "",
+    "level":3
+  },
+  {
+    "id": 25,
+    "name": "Adobe Photoshop",
+    "category": "Graphisme Retouche Photo",
+    "logo": "adobePhotoshop",
+    "version": "2024",
+    "level":3
+  },
+  {
+    "id": 26,
+    "name": "Adobe Illustrator",
+    "category": "Graphisme Dessin Vectoriel",
+    "logo": "adobeIllustrator",
+    "version": "2025",
+    "level":3
+  },
+  {
+    "id": 27,
+    "name": "Adobe Indesign",
+    "category": "Graphisme PAO",
+    "logo": "adobeIndesign",
+    "version": "2023",
+    "level":3
+  },
+  {
+    "id": 28,
+    "name": "Adobe Premiere",
+    "category": "Vidéo Montage",
+    "logo": "adobePremiere",
+    "version": "2025",
+    "level":3
+  },
+  {
+    "id": 29,
+    "name": "Adobe After Effects",
+    "category": "Vidéo Compositing Animation",
+    "logo": "adobeAfterEffects",
+    "version": "2023",
+    "level":3
+  },
+  {
+    "id": 30,
+    "name": "Adobe XD",
+    "category": "Graphisme Prototypage",
+    "logo": "adobeXD",
+    "version": "2023",
+    "level":3
+  },
+  {
+    "id": 31,
+    "name": "Sketch",
+    "category": "Graphisme Prototypage",
+    "logo": "sketch",
+    "version": "85.1",
+    "level":2
+  },
+  {
+    "id": 32,
+    "name": "Vue.JS",
+    "category": "Framework web",
+    "logo": "vueJS",
+    "version": "3.5.22",
+    "level":2
+  },
+  {
+    "id": 33,
+    "name": "Typescript",
+    "category": "langage",
+    "logo": "typescript",
+    "version": "5.9.0",
+    "level":2
+  },
+  {
+    "id": 34,
+    "name": "Vite",
+    "category": "Toolkit JS",
+    "logo": "vite",
+    "version": "7.1.7",
+    "level":1
+  },
+  {
+    "id": 35,
+    "name": "CakePHP",
+    "category": "Framework web",
+    "logo": "cakePHP",
+    "version": "5.2",
+    "level":1
+  },
+  {
+    "id": 36,
+    "name": "Selenium",
+    "category": "frameworks & outils de tests",
+    "logo": "selenium",
+    "version": "4.38",
+    "level":1
+  },
+  {
+    "id": 37,
+    "name": "Jest",
+    "category": "frameworks & outils de tests",
+    "logo": "jest",
+    "version": "30.0.5",
+    "level":1
+  },
+  {
+    "id": 38,
+    "name": "Mocha",
+    "category": "frameworks & outils de tests",
+    "logo": "mocha",
+    "version": "11.7.1",
+    "level":1
+  },
+  {
+    "id": 39,
+    "name": "Apache JMeter",
+    "category": "frameworks & outils de tests",
+    "logo": "apacheJMeter",
+    "version": "5.6.3",
+    "level":1
+  },
+  {
+    "id": 40,
+    "name": "Vitest",
+    "category": "frameworks & outils de tests",
+    "logo": "vitest",
+    "version": "3.2.4",
+    "level":2
+  },
+  {
+    "id": 41,
+    "name": "MySQL Workbench",
+    "category": "Client API/BD",
+    "logo": "mySQLWorkbench",
+    "version": "8.0 CE",
+    "level":1
+  },
+  {
+    "id": 42,
+    "name": "Postman",
+    "category": "Client API/BD",
+    "logo": "postman",
+    "version": "11.70.6",
+    "level":1
+  },
+  {
+    "id": 43,
+    "name": "Bun",
+    "category": "Gestionnaire de paquets",
+    "logo": "bun",
+    "version": "1.3.2",
+    "level":1
+  },
+  {
+    "id": 44,
+    "name": "Nginx",
+    "category": "Serveurs & conteneurisation",
+    "logo": "nginx",
+    "version": "1.28",
+    "level":1
+  },
+  {
+    "id": 45,
+    "name": "Kubernetes",
+    "category": "Serveurs & conteneurisation",
+    "logo": "kubernetes",
+    "version": "1.34.1",
+    "level":1
+  },
+  {
+    "id": 46,
+    "name": "GitHub",
+    "category": "DevOps & CI/CD",
+    "logo": "gitHub",
+    "version": "",
+    "level":2
+  },
+  {
+    "id": 47,
+    "name": "Jenkins",
+    "category": "DevOps & CI/CD",
+    "logo": "jenkins",
+    "version": "2.528.1",
+    "level":2
+  },
+  {
+    "id": 48,
+    "name": "Prometheus",
+    "category": "DevOps/Infrastructure",
+    "logo": "prometheus",
+    "version": "3.7.3",
+    "level":1
+  },
+  {
+    "id": 49,
+    "name": "Grafana",
+    "category": "DevOps/Infrastructure",
+    "logo": "grafana",
+    "version": "",
+    "level":1
+  },
+  {
+    "id": 50,
+    "name": "Vuetify",
+    "category": "Librairies & plugins",
+    "logo": "vuetify",
+    "version": "3.10.2",
+    "level":2
+  },
+  {
+    "id": 51,
+    "name": "Axios",
+    "category": "Librairies & plugins",
+    "logo": "axios",
+    "version": "1.12.2",
+    "level":1
+  },
+  {
+    "id": 52,
+    "name": "Pinia",
+    "category": "Librairies & plugins",
+    "logo": "pinia",
+    "version": "3.0.3",
+    "level":2
+  },
+  {
+    "id": 53,
+    "name": "Tailwind CSS",
+    "category": "Librairies & plugins",
+    "logo": "tailwind",
+    "version": "4.1",
+    "level":3
+  },
+  {
+    "id": 54,
+    "name": "Angular",
+    "category": "Framework web",
+    "logo": "angular",
+    "version": "21.12.14",
+    "level":2
+  }
+]

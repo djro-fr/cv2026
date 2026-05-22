@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 149.8 38">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        opacity: .7;
+      }
+    </style>
+  </defs>
+  <g id="logo" sodipodi:docname="Axios.svg">
+    <sodipodi:namedview id="namedview13" bordercolor="#666666" borderopacity="1" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" gridtolerance="10" guidetolerance="10" inkscape:current-layer="logo" inkscape:cx="81.989245" inkscape:cy="46.974697" inkscape:document-rotation="0" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1000" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-11" inkscape:window-y="-11" inkscape:zoom="6.7175144" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/>
+    <g id="g14">
+      <polygon id="polygon2" class="st0" points="69.3 36.8 78.3 36.8 78.3 1.1 69.3 1.1 69.3 36.8"/>
+      <path id="path4" class="st0" d="M100.4,29.3c5.7,0,9.9-4.9,9.9-10.3s-4.2-10.3-9.9-10.3-9.9,4.8-9.9,10.3,4.2,10.3,9.9,10.3M100.5,0C111.2,0,119.8,8.2,119.8,18.9s-8.7,19.1-19.4,19.1-19.4-8.3-19.4-19S89.8,0,100.5,0M120.9,26l8.2-1.9c.6,4.3,3.7,5.8,7,5.8s4.5-1.9,4.5-3.4-.7-2.4-3.1-2.9l-5-1c-6-1.1-10.2-4.9-10.2-10.6S128.6.4,135.6.4s12.9,5.7,13.5,10.4l-8,2.2c-.4-2.9-2.2-5-5.5-5s-4.2,1.9-4.2,3.3.6,2.6,2.7,3l5.2,1c6.8,1.3,10.6,5.4,10.6,10.8s-5.1,11.4-13.8,11.4-14-4.7-15.2-11.5"/>
+      <g>
+        <polygon class="st1" points="15.9 1.1 0 36.8 9.6 36.8 20.8 11.9 15.9 1.1 15.9 1.1"/>
+        <polygon points="55.2 18.6 67.1 1.1 56.2 1.1 49.7 11.7 43.4 1.1 32.4 1.1 44.5 18.6 37.7 28.3 25.6 1.1 15.9 1.1 15.9 1.1 20.8 11.9 31.9 36.8 42.2 36.8 49.7 25.5 57.2 36.8 67.6 36.8 55.2 18.6"/>
+      </g>
+    </g>
+  </g>
+</svg>
