@@ -1,0 +1,16 @@
+/* ANIMATIONS ---------------------------------------------- */
+
+@keyframes flashH1 {
+  0%   {color: var(--txtAccueil1);}
+  15%   {color: var(--txtAccueil2);}
+  50%  {color: white}
+  85%   {color: var(--txtAccueil2);}
+  100% {color: var(--txtAccueil1);}
+}
+@keyframes cercleP {
+  0%   { border-color: var(--cerclePortrait1); }
+  15%  { border-color: var(--cerclePortrait2); }
+  50%  { border-color: var(--cerclePortrait3); }
+  85%  { border-color: var(--cerclePortrait2); }
+  100% { border-color: var(--cerclePortrait1); }
+}

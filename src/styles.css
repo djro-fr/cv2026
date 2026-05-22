@@ -1,3 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme{
+  /* COLORS */
+  --color-bg: #ffffff;
+  --color-text: #000022;
+  --txtAccueil1: #f8d8ff;
+  --txtAccueil2: #ffe3d6;
+  --cerclePortrait1: rgba(145, 129, 255, 0.2);
+  --cerclePortrait2: rgba(255, 227, 149, 0.226);
+  --cerclePortrait3: rgba(243, 149, 255, 0.384);
+  --btnBorder:#9181FF;
+  /* --color-bg-primary, --color-text-accent */
+  --coulCompetence1: #f5f6fc;
+  --coulCompetence2: #363d3f;
+  --coulCompetence3: #508191;
+  --coulCompetence4: #3c7a8d;
+  --grayLight: #d4d5d8;
+  --grayLight2: #f1f8fc;
+  --fondComp: #cfe9f0;
+  --brdComp: #f2fafc;
+  --rouge: #EB5A46;
+  --bleu: #019da8;
+
+  /* FONTS */
+  --font-heading-home-1: 'CoR', serif;
+  --font-heading-home-2: 'CoS', serif;
+  --font-inside: 'Baskervville', serif;
+
+  --text-xxs: .6875rem;
+  --text-xs: .8125rem;
+  --text-sm: .875rem;
+  --text-sm2: .9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+}
+
+.dark{
+  --color-bg: #000022;
+  --color-text: #ffffff;
+  --coulCompetence1: #f5f6fc;
+  --coulCompetence2: #363d3f;
+  --coulCompetence3: #508191;
+  --coulCompetence4: #3c7a8d;
+  --grayLight: #d4d5d8;
+  --grayLight2: #f1f8fc;
+  --fondComp: #cfe9f0;
+  --brdComp: #f2fafc;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'CoS';
+    src: url('/fonts/CommutersSans-SemiBold.woff2') format('woff2'), url('/fonts/CommutersSans-SemiBold.woff') format('woff');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'CoR';
+    src: url('/fonts/CommutersSans-Regular.woff2') format('woff2'), url('/fonts/CommutersSans-Regular.woff') format('woff');
+    font-display: swap;
+  }
+  html {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  *,
+  *::before,
+  *::after {
+      box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    font-family: sans-serif;
+  }
+  figure{
+    margin: 0;
+  }
+}
+
+@layer components {
+  .btnLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 1px solid var(--btnBorder);
+    color: white;
+    text-align: center;
+    font-family: "CoS", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: .13rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  a.btnLink:hover{
+      border-color: white;
+  }
+}
