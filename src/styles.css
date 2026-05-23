@@ -43,6 +43,14 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1366px;
+
+  /* ANIMATION */
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
 }
 
 .dark{
@@ -95,11 +103,44 @@
     background-color: var(--color-bg);
     color: var(--color-text);
   }
-  h1, h2, h3 {
-    font-family: sans-serif;
+  h1{
+    font-family: var(--font-heading-home-r);
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 2em;
+  }
+  main#content p{
+    font-family: var(--font-inside);
+    font-weight: 500;
+    font-size: var(--text-xl);
+    line-height: 1.4;
+    padding: 0 15px;
+    margin: 0 0 20px;
+  }
+  main#content ul{
+    padding: 0;
+    padding-left: 40px;
+    margin: 0 0 16px;
+    li{
+      list-style: disc;
+      font-family: var(--font-inside);
+      font-weight: 500;
+      font-size: var(--text-xl);
+      line-height: 1.4;
+      padding: 0 0 15px 0px;
+      margin: 0;
+    }
+  }
+  main#content figcaption{
+    font-family: var(--font-inside);
+    font-size: var(--text-base);
+    line-height: 1.2;
+    font-style: italic;
+    font-weight: 500;
+    padding-top: 5px;
   }
   figure{
-    margin: 0;
+    margin: 35px 0 35px;
   }
 }
 
@@ -118,15 +159,16 @@
     color: white;
     text-align: center;
     font-family: "CoS", sans-serif;
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: .13rem;
     text-transform: uppercase;
     text-decoration: none;
-  }
-  a.btnLink:hover{
-      border-color: white;
+
+    &:hover{
+        border-color: white;
+    }
   }
 }
