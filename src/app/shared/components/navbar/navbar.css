@@ -1,0 +1,7 @@
+header nav a img {
+  opacity: .35;
+}
+
+header nav a.active img {
+  opacity: 1;
+}

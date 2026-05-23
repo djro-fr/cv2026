@@ -1,8 +1,10 @@
 import { Component, DOCUMENT, inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Navbar } from '../../shared/components/navbar/navbar';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-default',
-  imports: [],
+  imports: [Navbar, RouterOutlet],
   templateUrl: './default.html',
   styleUrl: './default.css',
 })

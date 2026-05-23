@@ -15,7 +15,7 @@
   --coulCompetence2: #363d3f;
   --coulCompetence3: #508191;
   --coulCompetence4: #3c7a8d;
-  --grayLight: #d4d5d8;
+  --grayLight: #e9eaec;
   --grayLight2: #f1f8fc;
   --fondComp: #cfe9f0;
   --brdComp: #f2fafc;
@@ -52,8 +52,8 @@
   --coulCompetence2: #363d3f;
   --coulCompetence3: #508191;
   --coulCompetence4: #3c7a8d;
-  --grayLight: #d4d5d8;
-  --grayLight2: #f1f8fc;
+  --color-grayLight: #d4d5d8;
+  --color-grayLight2: #f1f8fc;
   --fondComp: #cfe9f0;
   --brdComp: #f2fafc;
 }

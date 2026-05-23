@@ -1,1 +1,35 @@
-<p>navbar works!</p>
+<header>
+  <nav id="menu" class="grid max-w-125 grid-cols-[1fr_1fr_1fr_1fr_1fr] gap-x-2.5 m-0 mx-auto">
+      <a routerLink="/"
+        class="flex justify-center p-2 border-b-0 rounded-t-lg bg-[linear-gradient(0deg,var(--grayLight)_0%,var(--grayLight2)_20%)]"
+        routerLinkActive="active bg-[linear-gradient(0deg,var(--grayLight2)_0%,white_10%)] shadow-[2px_-5px_5px_rgba(0,0,0,0.1)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+          <img src="./images/icons/home.svg" alt="Accueil" class="w-full max-w-8 max-h-8">
+      </a>
+      <a routerLink="/skills" data-page="mes-competences"
+        class="flex justify-center p-2 border-b-0 rounded-t-lg bg-[linear-gradient(0deg,var(--grayLight)_0%,var(--grayLight2)_20%)]"
+        routerLinkActive="active bg-[linear-gradient(0deg,var(--grayLight2)_0%,white_10%)] shadow-[2px_-5px_5px_rgba(0,0,0,0.1)]"
+        >
+          <img src="./images/icons/comp.svg" alt="Compétences" class="w-full max-w-8 max-h-8">
+      </a>
+      <a routerLink="/experience" data-page="experience-pro"
+        class="flex justify-center p-2 border-b-0 rounded-t-lg bg-[linear-gradient(0deg,var(--grayLight)_0%,var(--grayLight2)_20%)]"
+        routerLinkActive="active bg-[linear-gradient(0deg,var(--grayLight2)_0%,white_10%)] shadow-[2px_-5px_5px_rgba(0,0,0,0.1)]"
+      >
+          <img src="./images/icons/job.svg" alt="Expérience" class="w-full max-w-8 max-h-8">
+      </a>
+      <a routerLink="/education" data-page="diplomes-etudes"
+        class="flex justify-center p-2 border-b-0 rounded-t-lg bg-[linear-gradient(0deg,var(--grayLight)_0%,var(--grayLight2)_20%)]"
+        routerLinkActive="active bg-[linear-gradient(0deg,var(--grayLight2)_0%,white_10%)] shadow-[2px_-5px_5px_rgba(0,0,0,0.1)]"
+      >
+          <img src="./images/icons/diploma.svg" alt="Diplômes" class="w-full max-w-8 max-h-8">
+      </a>
+      <a routerLink="/contact" data-page="contact"
+        class="flex justify-center p-2 border-b-0 rounded-t-lg bg-[linear-gradient(0deg,var(--grayLight)_0%,var(--grayLight2)_20%)]"
+        routerLinkActive="active bg-[linear-gradient(0deg,var(--grayLight2)_0%,white_10%)] shadow-[2px_-5px_5px_rgba(0,0,0,0.1)]"
+      >
+          <img src="./images/icons/mail.svg" alt="Contact" class="w-full max-w-8 max-h-8">
+      </a>
+  </nav>
+</header>
