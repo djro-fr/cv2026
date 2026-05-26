@@ -4,23 +4,24 @@
   /* COLORS */
   --color-bg: #ffffff;
   --color-text: #000022;
+
   --color-accueil1: #f8d8ff;
   --color-accueil2: #ffe3d6;
-  --cerclePortrait1: rgba(145, 129, 255, 0.2);
-  --cerclePortrait2: rgba(255, 227, 149, 0.226);
-  --cerclePortrait3: rgba(243, 149, 255, 0.384);
-  --btnBorder:#9181FF;
-  /* --color-bg-primary, --color-text-accent */
-  --coulCompetence1: #f5f6fc;
-  --coulCompetence2: #363d3f;
-  --coulCompetence3: #508191;
-  --coulCompetence4: #3c7a8d;
-  --grayLight: #e9eaec;
-  --grayLight2: #f1f8fc;
-  --fondComp: #cfe9f0;
-  --brdComp: #f2fafc;
-  --rouge: #EB5A46;
-  --bleu: #019da8;
+  --color-cerclePortrait1: rgba(145, 129, 255, 0.2);
+  --color-cerclePortrait2: rgba(255, 227, 149, 0.226);
+  --color-cerclePortrait3: rgba(243, 149, 255, 0.384);
+  --color-btnBorder:#9181FF;
+
+  --color-competence1: #f5f6fc;
+  --color-competence2: #363d3f;
+  --color-competence3: #508191;
+  --color-competence4: #3c7a8d;
+  --color-grayLight: #e9eaec;
+  --color-grayLight2: #f1f8fc;
+  --color-fondComp: #cfe9f0;
+  --color-brdComp: #f2fafc;
+  --color-primary: #019da8;
+  --color-secondary: #EB5A46;
 
   /* FONTS */
   --font-heading-home-r: 'CoR', serif;
@@ -56,14 +57,16 @@
 .dark{
   --color-bg: #000022;
   --color-text: #ffffff;
-  --coulCompetence1: #f5f6fc;
-  --coulCompetence2: #363d3f;
-  --coulCompetence3: #508191;
-  --coulCompetence4: #3c7a8d;
-  --color-grayLight: #d4d5d8;
+  --color-competence1: #f5f6fc;
+  --color-competence2: #363d3f;
+  --color-competence3: #508191;
+  --color-competence4: #3c7a8d;
+  --color-grayLight: #e9eaec;
   --color-grayLight2: #f1f8fc;
-  --fondComp: #cfe9f0;
-  --brdComp: #f2fafc;
+  --color-fondComp: #cfe9f0;
+  --color-brdComp: #f2fafc;
+  --color-primary: #019da8;
+  --color-secondary: #EB5A46;
 }
 
 @layer base {
@@ -113,20 +116,20 @@
     font-family: var(--font-inside);
     font-weight: 500;
     font-size: var(--text-xl);
-    line-height: 1.4;
+    line-height: 1.5;
     padding: 0 15px;
-    margin: 0 0 20px;
+    margin: 0 0 24px;
   }
   main#content ul{
     padding: 0;
     padding-left: 40px;
     margin: 0 0 16px;
     li{
-      list-style: disc;
+      list-style: url("/images/puce1.png");
       font-family: var(--font-inside);
       font-weight: 500;
       font-size: var(--text-xl);
-      line-height: 1.4;
+      line-height: 1.5;
       padding: 0 0 15px 0px;
       margin: 0;
     }

@@ -1,0 +1,15 @@
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+figure a:hover img.absolute {
+  animation: ping .5s;
+}
+
+figure a:hover{
+  scale: 1.05;
+  opacity: .6;
+}
