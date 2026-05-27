@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { SkillModel } from '../models/skill.model';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -11,36 +11,34 @@ export class SkillService {
 
   private readonly dataUrl = "/data/skills.json";
   private readonly httpClient = inject(HttpClient);
+  private readonly skills$ = this.httpClient.get<SkillModel[]>(this.dataUrl).pipe(shareReplay(1));
 
-  constructor(){
-  }
-
-  getListFromServer() {
-    return this.httpClient.get<SkillModel[]>(this.dataUrl);
+  getAllSkills() {
+    return this.skills$;
   }
 
   getSkillById(id:number){
-    return this.getListFromServer().pipe(
-      map(skills => skills.find(a => a.id === id))
+    return this.skills$.pipe(
+      map(skills => skills.find(skill => skill.id === id))
     );
   }
 
   getSkillsSortedByName(){
-    return this.getListFromServer().pipe(
+    return this.skills$.pipe(
       map(skills => skills.toSorted((a: SkillModel, b: SkillModel) => a.name.localeCompare(b.name)))
     );
   }
 
   getCategories(){
-    return this.getListFromServer().pipe(
+    return this.skills$.pipe(
       map(skills => [...new Set(skills.map(s => s.category))]
         .toSorted((a: string, b: string) => a.localeCompare(b)))
     );
   }
 
   getSkillsByCategory(cat:string){
-    return this.getListFromServer().pipe(
-      map(skills => skills.filter(a => a.category === cat))
+    return this.skills$.pipe(
+      map(skills => skills.filter(skill => skill.category === cat))
     );
   }
 
