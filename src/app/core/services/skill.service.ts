@@ -13,11 +13,9 @@ export class SkillService {
   private readonly httpClient = inject(HttpClient);
 
   constructor(){
-    console.log('service called');
   }
 
   getListFromServer() {
-    console.log('getListFromServer called');
     return this.httpClient.get<SkillModel[]>(this.dataUrl);
   }
 
@@ -40,7 +38,7 @@ export class SkillService {
     );
   }
 
-  getSkillByCategory(cat:string){
+  getSkillsByCategory(cat:string){
     return this.getListFromServer().pipe(
       map(skills => skills.filter(a => a.category === cat))
     );

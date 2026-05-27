@@ -21,7 +21,7 @@
     "category": "sgbd",
     "logo": "mySQL",
     "version": "8.0",
-    "level": 3
+    "level": 2
   },
   {
     "id": 4,
@@ -178,7 +178,7 @@
   {
     "id": 23,
     "name": "WordPress",
-    "category": "cms",
+    "category": "CMS",
     "logo": "wordpress",
     "version": "6.8.1",
     "level": 2
@@ -261,7 +261,7 @@
     "category": "langages",
     "logo": "typescript",
     "version": "5.9.0",
-    "level": 2
+    "level": 3
   },
   {
     "id": 34,
@@ -325,7 +325,7 @@
     "category": "sgbd",
     "logo": "mySQLWorkbench",
     "version": "8.0 CE",
-    "level": 1
+    "level": 2
   },
   {
     "id": 42,
@@ -469,7 +469,7 @@
     "category": "qualité",
     "logo": "sonarqube",
     "version": "2.9.8",
-    "level": 1
+    "level": 2
   },
   {
     "id": 60,
