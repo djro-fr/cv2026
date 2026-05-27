@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, HostListener } from '@angular/core';
 import { SkillService } from '../../core/services/skill.service';
 import { AsyncPipe } from '@angular/common';
 import { Observable, tap } from 'rxjs';
@@ -12,11 +12,17 @@ import { SkillModel } from '../../core/models/skill.model';
 })
 export class Skills {
   private readonly skillService = inject(SkillService);
-  readonly categories$ = this.skillService.getCategories();
-
-  showOrnament = true;
-
   private readonly cdr = inject(ChangeDetectorRef);
+
+  skillsCount = 0;
+  showOrnament = true;
+  isCategoryDrawerOpen = false;
+  categorySelected = '';
+  isCategoryListVisible = false;
+  hasLongScroll = false;
+
+  readonly categories$ = this.skillService.getCategories();
+  skills$ = this.pipeWithCount(this.skillService.getSkillsSortedByName());
 
   private resetOrnament() {
     console.clear();
@@ -24,39 +30,41 @@ export class Skills {
     setTimeout(() => {
       this.showOrnament = true;
       this.cdr.detectChanges();
-    }
-    , 10);
+    }, 10);
   }
 
-  skillsCount = 0;
-
-  private pipeWithCount(o: Observable<SkillModel[]> ){
+  private pipeWithCount(o: Observable<SkillModel[]>) {
     return o.pipe(
-      tap(skills => {
+      tap((skills) => {
         this.skillsCount = skills.length;
-      })
+      }),
     );
   }
 
-  skills$ = this.pipeWithCount(this.skillService.getSkillsSortedByName())
-
-  categorySelected = '';
-  isCategoryListVisible = false;
-
-  showAllSkills(){
+  showAllSkills() {
     this.skills$ = this.pipeWithCount(this.skillService.getSkillsSortedByName());
     this.categorySelected = '';
     this.resetOrnament();
   }
 
-  searchSkillsByCategory(cat:string){
+  searchSkillsByCategory(cat: string) {
     this.skills$ = this.pipeWithCount(this.skillService.getSkillsByCategory(cat));
     this.categorySelected = cat;
     this.resetOrnament();
+    this.isCategoryDrawerOpen = false;
   }
 
-  showCategories(){
+  showCategories() {
     this.isCategoryListVisible = !this.isCategoryListVisible;
+    this.isCategoryDrawerOpen = true;
   }
 
+  @HostListener('body:scroll')
+  onScroll() {
+    this.hasLongScroll = document.body.scrollTop > 400;
+  }
+
+  backToTop() {
+    document.body.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

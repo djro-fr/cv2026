@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "MySQL",
-    "category": "sgbd",
+    "category": "SGBD",
     "logo": "mySQL",
     "version": "8.0",
     "level": 2
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "MongoDB",
-    "category": "sgbd",
+    "category": "SGBD",
     "logo": "mongoDB",
     "version": "8.0.8",
     "level": 1
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "name": "Studio3T",
-    "category": "sgbd",
+    "category": "SGBD",
     "logo": "studio3T",
     "version": "2025.1.0",
     "level": 1
@@ -322,7 +322,7 @@
   {
     "id": 41,
     "name": "MySQL Workbench",
-    "category": "sgbd",
+    "category": "SGBD",
     "logo": "mySQLWorkbench",
     "version": "8.0 CE",
     "level": 2
