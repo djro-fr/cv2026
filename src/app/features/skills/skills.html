@@ -62,7 +62,7 @@
 
 <div
   id="categoriesGrid"
-  class="max-w-240 m-0 mx-auto px-0 pt-2.5 pb-11.25 flex flex-wrap gap-x-6 gap-y-2 w-full"
+  class="max-w-240 m-0 mx-auto px-0 pt-2.5 pb-25 flex flex-wrap gap-x-6 gap-y-2 w-full"
 >
   @for (skill of (skills$ | async) ?? []; track skill.id; let i = $index) {
     <div
@@ -105,7 +105,7 @@
   }
 </div>
 @if(showOrnament) {
-  <div class="flex justify-center w-full animate-[fadeIn_1s_ease_both]"
+  <div class="flex justify-center w-full animate-[fadeIn_1s_ease_both] absolute bottom-0"
        [style.animation-delay]="skillsCount * 50 + 500 + 'ms'">
     <img src="./images/ornament2.svg" alt="" class="h-9 w-fit opacity-15 mt-20 mb-5" />
   </div>
