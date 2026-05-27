@@ -44,10 +44,10 @@
     </div>
     <div
       id="categories-list-drawer"
-      class="absolute block z-1 h-full top-0 left-0 px-5 pt-3 pb-5 text-center bg-grayLight2 "
+      class="absolute flex flex-col z-1 justify-center h-full top-0 left-0 px-5 pt-3 pb-18 text-center bg-grayLight2 "
       [hidden]="!isCategoryDrawerOpen"
     >
-      <h3 class="w-full mb-3 text-2xl font-extrabold font-heading-home-r leading-11">Filtrer les catégories</h3>
+      <h3 class="w-full mb-4 text-2xl font-extrabold font-heading-home-r leading-11">Filtrer les catégories</h3>
       <div class="inline-block text-center mx-auto max-w-240 pb-0 w-full">
         @for (cat of (categories$ | async) ?? []; track cat; let i = $index) {
           @if (cat === categorySelected) {
@@ -85,7 +85,7 @@
 
 <div
 id="skills-grid"
-class="w-full max-w-240 m-0 mx-auto mb-0 px-5 pt-2.5 pb-0 grid grid-cols-2 gap-x-5 gap-y-2 "
+class="w-full max-w-240 m-0 mx-auto mb-0 px-5 pt-2.5 pb-0 grid grid-cols-2 gap-x-5 gap-y-2"
 >
 @for (skill of (skills$ | async) ?? []; track skill.id; let i = $index) {
   <div
