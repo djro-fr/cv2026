@@ -85,11 +85,6 @@ jobs:
           target: 'https://cv.djro.fr'
           rules_file_name: '.zap/rules.tsv'
           fail_action: false
-      - name: ZAP Summary
-        if: always()
-        run: |
-          echo "## ZAP Security Scan Results" >> $GITHUB_STEP_SUMMARY
-          cat report_html.html >> $GITHUB_STEP_SUMMARY
 
   lighthouse:
     runs-on: ubuntu-latest
