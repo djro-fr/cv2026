@@ -77,7 +77,6 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: actions/checkout@v4
       - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.15.0
         with:
