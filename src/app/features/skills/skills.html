@@ -1,18 +1,18 @@
 
 <div id="top-skills" class="w-full">
   <div class="max-w-full bg-white">
-    <h1 class="sm:p-0 px-3 pt-2 pb-2.5 max-w-240 mx-auto">Compétences</h1>
+    <h1 class="px-4 pt-4 pb-2.5 max-w-240 mx-auto">Compétences</h1>
   </div>
-  <div class="max-full mx-auto bg-white w-full">
-    <div class="flex flex-wrap max-w-240 mx-auto pb-0 px-4 sm:px-0">
-      <div class="flex flex-row mb-4 w-full">
+  <div class="max-full mx-auto pb-2 bg-white w-full">
+    <div class="flex flex-wrap max-w-240 mx-auto pb-0 px-4">
+      <div class="flex flex-row mb-5 w-full md:w-fit md:mr-3">
         <h2 class="inline-block mr-3 text-base font-extrabold font-heading-home-r leading-11">
           Catégories
         </h2>
         <button
           [class.hidden]="!categorySelected"
           [class.inline-block]="categorySelected"
-          class="flex-1 mr-0 px-5 py-3 text-white bg-primary rounded-full font-heading-home-s text-sm tracking-wide font-bold uppercase shadow-[1px_3px_3px_rgba(0,0,0,.2)] cursor-pointer hover:opacity-85 hover:shadow-[1px_6px_4px_rgba(0,0,0,.1)]"
+          class="flex-1 md:flex-0 mr-0 px-5 py-3 text-white bg-primary rounded-full font-heading-home-s text-sm tracking-wide font-bold uppercase shadow-[1px_3px_3px_rgba(0,0,0,.2)] cursor-pointer hover:opacity-85 hover:shadow-[1px_6px_4px_rgba(0,0,0,.1)]"
           (click)="showAllSkills()"
         >
           Toutes
@@ -20,12 +20,12 @@
         <div
           [class.hidden]="categorySelected"
           [class.inline-block]="!categorySelected"
-          class="mr-0 px-5 py-3 flex-1 text-center text-competence3 border border-fondComp rounded-full font-heading-home-s text-sm tracking-wide font-bold uppercase"
+          class="mr-0 px-5 py-3 flex-1 md:flex-0 text-center text-competence3 border border-fondComp rounded-full font-heading-home-s text-sm tracking-wide font-bold uppercase"
         >
           Toutes
         </div>
       </div>
-      <div class="flex w-full mb-4 text-center justify-center">
+      <div class="flex w-full md:w-fit mb-4 text-center justify-center">
         <div
           [class.hidden]="!categorySelected"
           class="flex flex-1 mr-3 px-5 py-3 h-fit justify-center text-center text-competence3 border border-fondComp rounded-full font-heading-home-s text-sm tracking-wide font-bold uppercase"
@@ -77,7 +77,7 @@
 
 @if(hasLongScroll){
   <div id="back-to-top" class="z-10 fixed right-0 bottom-20 rounded-l-full bg-white w-15 h-15 block shadow-lg">
-    <a class="relative block w-full pl-5 pr-3 pt-3.5" (click)="backToTop()">
+    <a class="relative block w-full pl-5 pr-3 pt-3.5 cursor-pointer hover:opacity-50" (click)="backToTop()">
       <img src="/images/icons/arrow-top.svg" alt="Haut de page">
     </a>
   </div>
@@ -85,7 +85,7 @@
 
 <div
 id="skills-grid"
-class="w-full max-w-240 m-0 mx-auto mb-0 px-5 pt-2.5 pb-0 grid grid-cols-2 gap-x-5 gap-y-2"
+class="w-full max-w-240 m-0 mx-auto mb-0 px-5 pt-2.5 pb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-5 gap-y-2"
 >
 @for (skill of (skills$ | async) ?? []; track skill.id; let i = $index) {
   <div
@@ -130,9 +130,9 @@ class="w-full max-w-240 m-0 mx-auto mb-0 px-5 pt-2.5 pb-0 grid grid-cols-2 gap-x
 
 @if (showOrnament) {
   <div
-    class="flex justify-center w-full animate-[fadeIn_1s_ease_both] mb-15 sm:absolute sm:bottom-0"
+    class="flex justify-center w-full animate-[fadeIn_1s_ease_both] mb-20 sm:mb-20 md:mb-5"
     [style.animation-delay]="skillsCount * 50 + 500 + 'ms'"
   >
-    <img src="./images/ornament2.svg" alt="" class="h-9 w-fit opacity-15 mt-20 mb-5" />
+    <img src="./images/ornament2.svg" alt="" class="h-9 w-fit opacity-15" />
   </div>
 }
