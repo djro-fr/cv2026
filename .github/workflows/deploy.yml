@@ -85,6 +85,12 @@ jobs:
           target: 'https://cv.djro.fr'
           rules_file_name: '.zap/rules.tsv'
           fail_action: false
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: zap-report
+          path: report_html.html
 
   lighthouse:
     runs-on: ubuntu-latest
