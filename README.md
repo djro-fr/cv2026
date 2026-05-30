@@ -2,7 +2,7 @@
 
 ## App
 
-This is an interactive app, made with Angular 21, to display my resume as a front-end junior developer
+This is an interactive app, made with Angular 21, to display my resume as a front-end developer
 
 ## Tech stack for this project
 

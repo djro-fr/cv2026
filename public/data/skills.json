@@ -404,7 +404,7 @@
     "name": "Axios",
     "category": "frontend",
     "logo": "axios",
-    "version": "1.12.2",
+    "version": "1.x",
     "level": 1
   },
   {
