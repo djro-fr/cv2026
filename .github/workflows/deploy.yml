@@ -40,5 +40,7 @@ jobs:
             docker load < /tmp/cv2026.tar.gz
             docker stop cv2026 || true
             docker rm cv2026 || true
-            docker run -d -p 80:80 --name cv2026 --restart unless-stopped cv2026
+            docker run -d -p 80:80 -p 443:443 \
+              -v /etc/letsencrypt:/etc/letsencrypt:ro \
+              --name cv2026 --restart unless-stopped cv2026
             rm /tmp/cv2026.tar.gz
