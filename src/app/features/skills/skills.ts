@@ -12,6 +12,8 @@ import { SeoService } from '../../core/services/seo';
   styleUrl: './skills.css',
 })
 export class Skills implements OnInit {
+  private readonly seo = inject(SeoService);
+
   private readonly skillService = inject(SkillService);
   private readonly cdr = inject(ChangeDetectorRef);
 
@@ -22,13 +24,11 @@ export class Skills implements OnInit {
   isCategoryListVisible = false;
   hasLongScroll = false;
 
-  constructor(private readonly seo: SeoService) {}
-
   ngOnInit() {
     this.seo.update({
       title: 'Compétences - Sylvain Girault, Développeur Front-End (web + apps)',
       description: 'Compétences de Sylvain Girault, développeur front-end (web & mobile apps).',
-      url: 'https://cv.djro.fr/skills'
+      url: 'https://cv.djro.fr/skills',
     });
   }
 

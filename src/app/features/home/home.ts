@@ -1,6 +1,16 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  OnDestroy,
+  OnInit,
+  PLATFORM_ID,
+  ViewChild,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo';
 
 @Component({
@@ -10,6 +20,7 @@ import { SeoService } from '../../core/services/seo';
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit, OnDestroy, OnInit {
+  private readonly seo = inject(SeoService);
 
   private readonly platformId = inject(PLATFORM_ID);
 
@@ -22,22 +33,20 @@ export class Home implements AfterViewInit, OnDestroy, OnInit {
     video1: {
       mobile: 'video/seq02_min.mp4',
       tablet: 'video/seq01.mp4',
-      desktop: 'video/seq01.mp4'
+      desktop: 'video/seq01.mp4',
     },
     video2: {
       mobile: 'video/seq03_min.mp4',
       tablet: 'video/seq03.mp4',
-      desktop: 'video/seq03.mp4'
-    }
+      desktop: 'video/seq03.mp4',
+    },
   };
-
-  constructor(private readonly seo: SeoService) {}
 
   ngOnInit() {
     this.seo.update({
       title: 'Sylvain Girault, Développeur Front-End (web + apps)',
       description: 'CV interactif de Sylvain Girault, développeur front-end (web & mobile apps).',
-      url: 'https://cv.djro.fr'
+      url: 'https://cv.djro.fr',
     });
   }
 
@@ -77,5 +86,4 @@ export class Home implements AfterViewInit, OnDestroy, OnInit {
   ngOnDestroy(): void {
     if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
   }
-
 }

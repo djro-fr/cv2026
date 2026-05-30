@@ -33,12 +33,12 @@
           {{ categorySelected }}
         </div>
         <span class="flex items-center h-full">
-          <a
+          <button
             class="h-fit pt-0 pb-0 link"
             (click)="showCategories()"
           >
             {{ isCategoryDrawerOpen ? 'Masquer' : 'Filtrer' }}
-          </a>
+          </button>
         </span>
       </div>
     </div>
@@ -77,9 +77,9 @@
 
 @if(hasLongScroll){
   <div id="back-to-top" class="z-10 fixed right-0 bottom-20 rounded-l-full bg-white w-15 h-15 block shadow-lg">
-    <a class="relative block w-full pl-5 pr-3 pt-3.5 cursor-pointer hover:opacity-50" (click)="backToTop()">
+    <button class="relative block w-full pl-5 pr-3 pt-3.5 cursor-pointer hover:opacity-50" (click)="backToTop()">
       <img src="/images/icons/arrow-top.svg" alt="Haut de page">
-    </a>
+    </button>
   </div>
 }
 
