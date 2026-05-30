@@ -1,8 +1,9 @@
-import { ChangeDetectorRef, Component, inject, HostListener } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, HostListener, OnInit } from '@angular/core';
 import { SkillService } from '../../core/services/skill.service';
 import { AsyncPipe } from '@angular/common';
 import { Observable, tap } from 'rxjs';
 import { SkillModel } from '../../core/models/skill.model';
+import { SeoService } from '../../core/services/seo';
 
 @Component({
   selector: 'app-skills',
@@ -10,7 +11,7 @@ import { SkillModel } from '../../core/models/skill.model';
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
-export class Skills {
+export class Skills implements OnInit {
   private readonly skillService = inject(SkillService);
   private readonly cdr = inject(ChangeDetectorRef);
 
@@ -20,6 +21,16 @@ export class Skills {
   categorySelected = '';
   isCategoryListVisible = false;
   hasLongScroll = false;
+
+  constructor(private readonly seo: SeoService) {}
+
+  ngOnInit() {
+    this.seo.update({
+      title: 'Compétences - Sylvain Girault, Développeur Front-End (web + apps)',
+      description: 'Compétences de Sylvain Girault, développeur front-end (web & mobile apps).',
+      url: 'https://cv.djro.fr/skills'
+    });
+  }
 
   readonly categories$ = this.skillService.getCategories();
   skills$ = this.pipeWithCount(this.skillService.getSkillsSortedByName());

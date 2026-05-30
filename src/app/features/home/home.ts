@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { SeoService } from '../../core/services/seo';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { RouterLink } from "@angular/router";
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements AfterViewInit, OnDestroy {
+export class Home implements AfterViewInit, OnDestroy, OnInit {
 
   private readonly platformId = inject(PLATFORM_ID);
 
@@ -29,6 +30,16 @@ export class Home implements AfterViewInit, OnDestroy {
       desktop: 'video/seq03.mp4'
     }
   };
+
+  constructor(private readonly seo: SeoService) {}
+
+  ngOnInit() {
+    this.seo.update({
+      title: 'Sylvain Girault, Développeur Front-End (web + apps)',
+      description: 'CV interactif de Sylvain Girault, développeur front-end (web & mobile apps).',
+      url: 'https://cv.djro.fr'
+    });
+  }
 
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
