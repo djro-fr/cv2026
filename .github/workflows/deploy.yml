@@ -1,0 +1,44 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t cv2026 .
+
+      - name: Save Docker image
+        run: docker save cv2026 | gzip > cv2026.tar.gz
+
+      - name: Copy image to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          source: cv2026.tar.gz
+          target: /tmp/
+
+      - name: Deploy on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          script: |
+            docker load < /tmp/cv2026.tar.gz
+            docker stop cv2026 || true
+            docker rm cv2026 || true
+            docker run -d -p 80:80 --name cv2026 --restart unless-stopped cv2026
+            rm /tmp/cv2026.tar.gz
