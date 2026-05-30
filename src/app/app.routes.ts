@@ -31,7 +31,8 @@ export const routes: Routes = [
       { path: 'contact', component: Contact },
       { path: 'education', component: Education },
       { path: 'experience', component: Experience },
+      { path: '**', component: NotFound }
     ]
   },
-  { path: '**', component: NotFound }
+
 ];

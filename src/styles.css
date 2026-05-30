@@ -241,9 +241,11 @@
     letter-spacing: .13rem;
     text-transform: uppercase;
     text-decoration: none;
-
     &:hover{
         border-color: white;
     }
+  }
+  a.link{
+   @apply font-heading-home-s leading-normal text-sm tracking-wide text-competence3 border-b border-b-competence4 cursor-pointer hover:text-competence2 hover:border-b-competence2
   }
 }
