@@ -76,11 +76,72 @@
   @font-face {
     font-family: 'CoS';
     src: url('/fonts/CommutersSans-SemiBold.woff2') format('woff2'), url('/fonts/CommutersSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'CoR';
     src: url('/fonts/CommutersSans-Regular.woff2') format('woff2'), url('/fonts/CommutersSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    src: url('/fonts/Baskervville-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
   }
   html {
